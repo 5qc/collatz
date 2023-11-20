@@ -22,6 +22,8 @@ submit.onclick = () => {
     createGraph(<HTMLCanvasElement>document.getElementById("graph1"), array)
     createLogGraph(<HTMLCanvasElement>document.getElementById("graph2"), logArray)
     checkLog()
+
+    document.getElementById("steps").innerText = array.length.toString()
 }
 
 log.onchange = () => {

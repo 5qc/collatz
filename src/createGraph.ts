@@ -1,6 +1,4 @@
 function createGraph(ctx, arr) {
-    document.getElementById("steps").innerText = arr.length
-
     const chartData = {
         labels: Array.from(Array(arr.length).keys()).map(x => x + 1),
         datasets: [
