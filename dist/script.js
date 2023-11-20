@@ -84,12 +84,12 @@ submit.onclick = () => {
     array.push(Number(num.value));
     while (!array.includes(1))
         array.push(performMath(array[array.length - 1]));
+    document.getElementById("steps").innerText = array.length.toString();
     const logArray = array.map(x => Math.log(x));
     resetGraph();
     createGraph(document.getElementById("graph1"), array);
     createLogGraph(document.getElementById("graph2"), logArray);
     checkLog();
-    document.getElementById("steps").innerText = array.length.toString();
 };
 log.onchange = () => {
     checkLog();
