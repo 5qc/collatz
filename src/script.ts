@@ -21,14 +21,9 @@ submit.onclick = () => {
     resetGraph()
     createGraph(<HTMLCanvasElement>document.getElementById("graph1"), array)
     createLogGraph(<HTMLCanvasElement>document.getElementById("graph2"), logArray)
+    checkLog()
 }
 
 log.onchange = () => {
-    if (log.checked === true) {
-        document.getElementById("graph1").style.display = "none"
-        document.getElementById("graph2").style.display = "block"
-    } else {
-        document.getElementById("graph1").style.display = "block"
-        document.getElementById("graph2").style.display = "none"
-    }
+    checkLog()
 }

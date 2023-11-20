@@ -1,6 +1,17 @@
+function checkLog() {
+    if (log.checked === true) {
+        document.getElementById("graph1").style.display = "none";
+        document.getElementById("graph2").style.display = "block";
+    }
+    else {
+        document.getElementById("graph1").style.display = "block";
+        document.getElementById("graph2").style.display = "none";
+    }
+}
 function createGraph(ctx, arr) {
+    document.getElementById("steps").innerText = arr.length;
     const chartData = {
-        labels: Array.from(Array(arr.length).keys()),
+        labels: Array.from(Array(arr.length).keys()).map(x => x + 1),
         datasets: [
             {
                 label: "",
@@ -78,15 +89,9 @@ submit.onclick = () => {
     resetGraph();
     createGraph(document.getElementById("graph1"), array);
     createLogGraph(document.getElementById("graph2"), logArray);
+    checkLog();
 };
 log.onchange = () => {
-    if (log.checked === true) {
-        document.getElementById("graph1").style.display = "none";
-        document.getElementById("graph2").style.display = "block";
-    }
-    else {
-        document.getElementById("graph1").style.display = "block";
-        document.getElementById("graph2").style.display = "none";
-    }
+    checkLog();
 };
 //# sourceMappingURL=script.js.map

@@ -115,3 +115,11 @@ input {
         transform: rotate(45deg);
     }
 }
+
+#steps {
+    opacity: 0.5;
+    position: fixed;
+    top: 15px;
+    right: 17px;
+    font-size: 15px;
+}
