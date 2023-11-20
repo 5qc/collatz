@@ -54,6 +54,10 @@ function performMath(num) {
     else
         return num / 2;
 }
+function raiseError(text) {
+    document.getElementById("error").style.display = "block";
+    document.getElementById("error").innerText = text;
+}
 function resetGraph() {
     const graph = document.createElement("canvas");
     graph.setAttribute("id", "graph1");
@@ -80,16 +84,22 @@ num.onkeyup = (e) => {
 };
 let array = [];
 submit.onclick = () => {
-    array = [];
-    array.push(Number(num.value));
-    while (!array.includes(1))
-        array.push(performMath(array[array.length - 1]));
-    document.getElementById("steps").innerText = array.length.toString();
-    const logArray = array.map(x => Math.log(x));
-    resetGraph();
-    createGraph(document.getElementById("graph1"), array);
-    createLogGraph(document.getElementById("graph2"), logArray);
-    checkLog();
+    if (Number(num.value) > 1) {
+        document.getElementById("error").style.display = "none";
+        array = [];
+        array.push(Number(num.value));
+        while (!array.includes(1))
+            array.push(performMath(array[array.length - 1]));
+        document.getElementById("steps").innerText = array.length.toString();
+        const logArray = array.map(x => Math.log(x));
+        resetGraph();
+        createGraph(document.getElementById("graph1"), array);
+        createLogGraph(document.getElementById("graph2"), logArray);
+        checkLog();
+    }
+    else {
+        raiseError("Number has to be more than 1.");
+    }
 };
 log.onchange = () => {
     checkLog();
