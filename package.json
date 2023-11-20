@@ -1,0 +1,26 @@
+{
+  "name": "collatz",
+  "version": "1.0.0",
+  "description": "collatz conjecture",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5qc/collatz.git"
+  },
+  "keywords": [
+    "collatz",
+    "typescript"
+  ],
+  "author": "5qc",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/5qc/collatz/issues"
+  },
+  "homepage": "https://github.com/5qc/collatz#readme",
+  "devDependencies": {
+    "@types/chart.js": "^2.9.40"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collatz</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/style.css" />
+    <script type="text/javascript" src="/dist/script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+<body>
+    <div class="body">
+        <div class="container">
+            <input id="number" />
+            <button id="submit">Submit</button>
+            <br />
+            <div class="log">
+                <label class="check">log
+                    <input type="checkbox" id="log" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+    
+        <div id="result">
+            <canvas id="graph1" height="100%" width="100%"></canvas>
+            <canvas id="graph2" height="100%" width="100%" style="display: none;"></canvas>
+        </div>
+    </div>
+</body>
+</html>

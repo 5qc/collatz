@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "outFile": "../dist/script.js",
+        "sourceMap": true
+    }
+}
