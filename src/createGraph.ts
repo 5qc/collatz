@@ -6,7 +6,7 @@ function createGraph(ctx, arr) {
                 label: "",
                 data: arr,
                 fill: false,
-                borderColor: '#f8f8f8',
+                borderColor: "#f8f8f8",
                 tension: 0.1
             }
         ]
@@ -26,11 +26,30 @@ function createGraph(ctx, arr) {
                 // @ts-ignore
                 x: {
                     display: false
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            family: "'Roboto Mono', monospace"
+                        }
+                    }
                 }
             },
             plugins: {
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    displayColors: false,
+                    titleFont: {
+                        family: "'Roboto Mono', monospace"
+                    },
+                    bodyFont: {
+                        family: "'Roboto Mono', monospace"
+                    },
+                    footerfont: {
+                        family: "'Roboto Mono', monospace"
+                    }
                 }
             }
         }
