@@ -26,8 +26,10 @@ submit.onclick = () => {
         createGraph(<HTMLCanvasElement>document.getElementById("graph1"), array)
         createLogGraph(<HTMLCanvasElement>document.getElementById("graph2"), logArray)
         checkLog()
-    } else {
+    } else if (Number(num.value) < 2) {
         raiseError("Number has to be more than 1.")
+    } else if (Number(num.value) === Infinity) {
+        raiseError("Number has to be less than 1.797693134862315E+308.")
     }
 }
 
