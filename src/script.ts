@@ -11,7 +11,7 @@ num.onkeyup = (e) => {
 
 let array = []
 submit.onclick = () => {
-    if (Number(num.value) > 1) {
+    if (Number(num.value) > 1 && Number(num.value) !== Infinity) {
         document.getElementById("error").style.display = "none"
         
         array = []
