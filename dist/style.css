@@ -13,6 +13,15 @@ body {
   margin: 0;
 }
 
+a, .link {
+  color: currentcolor;
+  border-bottom: 1px solid #f8f8f8;
+  cursor: pointer;
+}
+a:hover, .link:hover {
+  border-bottom: none;
+}
+
 input {
   padding: 7px;
   border: 5px solid #333;
@@ -43,7 +52,7 @@ button:hover {
   align-items: center;
 }
 
-#error {
+.error {
   color: salmon;
   text-align: center;
 }
@@ -73,16 +82,16 @@ button:hover {
 }
 
 .check {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   width: fit-content;
 }
 .check input {
@@ -125,12 +134,52 @@ button:hover {
   transform: rotate(45deg);
 }
 
-#steps {
+.top-right {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   opacity: 0.5;
   position: fixed;
   top: 15px;
   right: 17px;
   font-size: 15px;
+  text-align: right;
+}
+
+.window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  border: 7px solid #313131;
+  padding: 10px 15px;
+  border-radius: 10px;
+  z-index: 101;
+}
+.window input {
+  background-color: #111;
+  border-color: #313131;
+}
+.window button {
+  background-color: #333;
+}
+.window button:hover {
+  background-color: #444;
+}
+.window .title {
+  padding-bottom: 5px;
+}
+
+#screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
