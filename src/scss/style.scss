@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+@mixin no-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 * {
     font-family: "Roboto Mono", monospace;
 }
@@ -12,6 +19,16 @@ body {
     background-color: #111;
     color: #f8f8f8;
     margin: 0;
+}
+
+a {
+    color: currentcolor;
+    border-bottom: 1px solid #f8f8f8;
+    cursor: pointer;
+    
+    &:hover {
+        border-bottom: none;
+    }
 }
 
 input {
@@ -46,7 +63,7 @@ button {
     align-items: center;
 }
 
-#error {
+.error {
     color: salmon;
     text-align: center;
 }
@@ -77,16 +94,13 @@ button {
 }
 
 .check {
+    @include no-select;
     display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: fit-content;
     
     input {
@@ -134,10 +148,55 @@ button {
     }
 }
 
-#steps {
+.top-right {
+    @include no-select;
     opacity: 0.5;
     position: fixed;
     top: 15px;
     right: 17px;
     font-size: 15px;
+    text-align: right;
+}
+
+.link {
+    @extend a
+}
+
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    border: 7px solid #313131;
+    padding: 10px 15px;
+    border-radius: 10px;
+    z-index: 101;
+
+    input {
+        background-color: #111;
+        border-color: #313131;
+    }
+
+    button {
+        background-color: #333;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+
+    .title {
+        padding-bottom: 5px;
+    }
+}
+
+#screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
 }

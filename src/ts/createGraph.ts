@@ -1,6 +1,6 @@
 function createGraph(ctx, arr) {
     const chartData = {
-        labels: Array.from(Array(arr.length).keys()).map(x => x + 1),
+        labels: Array.from(Array(arr.length).keys()),
         datasets: [
             {
                 label: "",
