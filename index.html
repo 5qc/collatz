@@ -24,7 +24,7 @@
     <div class="body">
         <div class="container">
             <input id="number" />
-            <button id="submit">Submit</button>
+            <button id="submit">submit</button>
             <br />
             <div class="log">
                 <label class="check">log
@@ -35,12 +35,29 @@
         </div>
         
         <div id="result">
-            <div id="error"></div>
+            <div id="error" class="error"></div>
             <canvas id="graph1" height="100%" width="100%"></canvas>
             <canvas id="graph2" height="100%" width="100%" style="display: none;"></canvas>
         </div>
     </div>
     
-    <div id="steps" title="steps">0</div>
+    <div class="top-right">
+        <div>steps: <span id="steps">0</span></div>
+        <div class="link" id="stats-link">for statisticians</div>
+    </div>
+
+    <div id="screen" style="display: none;"></div>
+    <div class="window" id="stats" style="display: none;">
+        <div class="title">simulate range</div>
+        <div style="display: flex; gap: 5px; padding-bottom: 5px;">
+            <input id="range1" placeholder="2" /><!--
+            --><input id="range2" placeholder="100" />
+        </div>
+        <div id="stats-error" class="error" style="display: none; padding-bottom: 5px;"></div>
+        <div style="display: flex; gap: 5px;">
+            <button id="export-csv" style="width: 100%;">export csv</button>
+            <button id="export-json" style="width: 100%;">export json</button>
+        </div>
+    </div>
 </body>
 </html>
