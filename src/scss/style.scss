@@ -11,6 +11,11 @@
     font-family: "Roboto Mono", monospace;
 }
 
+::selection {
+    background-color: #f8f8f8;
+    color: #222;
+}
+
 html, body {
     height: 100%;
 }
