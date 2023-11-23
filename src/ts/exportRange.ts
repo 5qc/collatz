@@ -12,6 +12,9 @@ function exportRange(type: string) {
     } else if (num2 < num1) {
         error.style.display = "block"
         error.innerText = "Number 1 has to be smaller than number 2"
+    } else if ((num2 - num1) > 500000) {
+        error.style.display = "block"
+        error.innerHTML = "Number of iterations has<br />to be less than 500,000."
     } else {
         error.style.display = "none"
 
