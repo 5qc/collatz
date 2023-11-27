@@ -89,6 +89,10 @@ button {
     padding-top: 2em;
     height: 79%;
     width: 90%;
+
+    @media screen and (max-width: 900px) {
+        padding-top: 0.7em;
+    }
 }
 
 .log {
@@ -154,13 +158,21 @@ button {
 }
 
 .top-right {
+    $p: 15px;
+
     @include no-select;
     opacity: 0.5;
     position: fixed;
-    top: 15px;
     right: 17px;
     font-size: 15px;
     text-align: right;
+
+    @media screen and (max-width: 900px) {
+        bottom: $p;
+    }
+    @media screen and (min-width: 900px) {
+        top: $p;
+    }
 }
 
 .link {
@@ -189,6 +201,10 @@ button {
         &:hover {
             background-color: #444;
         }
+    }
+
+    @media screen and (max-width: 900px) {
+        transform: translate(-50%, -50%) scale(0.8);
     }
 
     .title {

@@ -78,6 +78,11 @@ button:hover {
   height: 79%;
   width: 90%;
 }
+@media screen and (max-width: 900px) {
+  #result {
+    padding-top: 0.7em;
+  }
+}
 
 .log {
   font-size: 17px;
@@ -146,10 +151,19 @@ button:hover {
   user-select: none;
   opacity: 0.5;
   position: fixed;
-  top: 15px;
   right: 17px;
   font-size: 15px;
   text-align: right;
+}
+@media screen and (max-width: 900px) {
+  .top-right {
+    bottom: 15px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .top-right {
+    top: 15px;
+  }
 }
 
 .window {
@@ -172,6 +186,11 @@ button:hover {
 }
 .window button:hover {
   background-color: #444;
+}
+@media screen and (max-width: 900px) {
+  .window {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 .window .title {
   padding-bottom: 5px;
