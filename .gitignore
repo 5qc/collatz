@@ -1,3 +1,7 @@
+# folders
 test/
 node_modules/
+
+# files & extensions
 src/randomColor.ts
+*.bat
